@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--head bar-->
+    <div id="head-placeholder"></div>
+    <script>
+      $(function () {
+        $("#head-placeholder").load("head.html");
+      });
+    </script>
+    <!--end of head bar-->
+    <title>Feedback</title>
+  </head>
+ 
+
+<body>
+  <!--Error Tab-->
+ 
+<div id="error_page"></div>
+
+<script>
+  $(function () {
+    $("#error_page").load("error.html");
+  });
+</script>
+<!--end of Error Tab-->
+<div id="normalbody">
+  <!--Navigation bar-->
+
+  <div id="nav-placeholder"></div>
+
+  <script>
+    $(function () {
+      $("#nav-placeholder").load("nav.html");
+    });
+  </script>
+  <!--end of Navigation bar-->
+  <div id="feedback">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img-01.webp" alt="Message" />
+      </div>
+      <div class="col-md-6">
+        <h2>Review us...</h2>
+        <form action="https://formspree.io/f/xvoynzkk" method="post" enctype="text/plain">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Name*"
+            required
+          /><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email*"
+            required
+          /><br />
+
+          <div id="rating">
+            <input
+              type="radio"
+              class="radio"
+              id="Happy"
+              name="group"
+              required
+            />
+
+            <input type="radio" class="radio" id="Normal" name="group" />
+            <input type="radio" class="radio" id="Angry" name="group" />
+
+            <br />
+            <label for="radio-1"
+              ><span id="happy" class="material-symbols-outlined">
+                sentiment_very_satisfied
+              </span></label
+            >
+            <label for="radio-2"
+              ><span id="normal" class="material-symbols-outlined">
+                sentiment_neutral
+              </span></label
+            >
+
+            <label for="radio-3"
+              ><span id="angry" class="material-symbols-outlined">
+                sentiment_extremely_dissatisfied
+              </span></label
+            >
+          </div>
+          <br />
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Message*"
+            required
+          ></textarea>
+
+          <br />
+          <input id="submit" type="submit" value="Submit" required />
+          <input id="reset" type="reset" value="Reset" required />
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--Footer bar-->
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    $(function () {
+      $("#footer-placeholder").load("footer.html");
+    });
+  </script>
+  <!--end of Footer bar-->
+</div>
+   
+ </body>
+  
+  
+
+  
+</html>
